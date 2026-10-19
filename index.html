@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | Université numérique Cheikh Hamidou KANE (UN-CHK)</title>
+    <meta name="description" content="Site officiel de l'Université numérique Cheikh Hamidou KANE (UN-CHK). Formations 100% en ligne accessibles où que vous soyez au Sénégal et dans le monde.">
+    <!-- Google Fonts avec polices système de secours fluides -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Feuille de styles CSS purement locale -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==============================================
+         HEADER & NAVIGATION BAR
+    =============================================== -->
+    <header class="main-header" id="top">
+        <div class="header-container">
+            <!-- Brand Logo UN-CHK -->
+            <div class="logo-container">
+                <a href="#top" class="brand-link" aria-label="Accueil UN-CHK">
+                    <!-- Si vous déposez votre fichier logo dans assets/images/logo.png, il s'affiche automatiquement -->
+                    <img src="assets/images/logo.png" alt="Logo UN-CHK" class="brand-image-logo" onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';" onload="document.getElementById('brandLogoFallback').style.display='none';" style="height: 52px; width: auto; max-width: 220px; object-fit: contain;">
+                    <div class="brand-logo-group" id="brandLogoFallback">
+                        <svg class="brand-symbol" viewBox="0 0 100 65" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <!-- Stylized "un" logo -->
+                            <path d="M 8 10 C 8 36, 18 52, 34 52 C 48 52, 53 38, 53 22 L 53 10" stroke="#009473" stroke-width="8" stroke-linecap="round"/>
+                            <path d="M 53 25 C 57 15, 68 10, 80 10 C 92 10, 96 22, 96 38 L 96 52" stroke="#0080a5" stroke-width="8" stroke-linecap="round"/>
+                            <circle cx="80" cy="5" r="4" fill="#f5ad2b"/>
+                        </svg>
+                        <div class="brand-text">
+                            <span class="brand-line-1">UNIVERSITÉ NUMÉRIQUE</span>
+                            <span class="brand-line-2">CHEIKH HAMIDOU KANE</span>
+                            <span class="brand-line-3">Savoir • Innovation • Excellence</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Bouton Hamburger Mobile -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
+                <svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Menu Principal de Navigation -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <!-- ACCUEIL (Bloc Bleu Pleine Hauteur) -->
+                    <li class="nav-item nav-block-blue active-nav">
+                        <a href="#top" class="nav-link nav-link-blue">ACCUEIL</a>
+                    </li>
+
+                    <!-- INSTITUTION (Bloc Jaune/Or Pleine Hauteur avec Menu Déroulant) -->
+                    <li class="nav-item nav-block-yellow has-dropdown">
+                        <a href="#institution" class="nav-link nav-link-yellow">
+                            INSTITUTION 
+                            <svg class="nav-arrow" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <ul class="dropdown-menu institution-dropdown">
+                            <li><a href="#mot-recteur">Mot du Recteur</a></li>
+                            <li>
+                                <a href="#presentation" class="has-sub-arrow">
+                                    <span>Présentation</span>
+                                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#gouvernance" class="has-sub-arrow">
+                                    <span>Gouvernance</span>
+                                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </li>
+                            <li><a href="#organigramme">Organigramme</a></li>
+                            <li><a href="#en-chiffres">L’Université en chiffres</a></li>
+                            <li><a href="#directions-poles">Directions & Pôles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- FORMATIONS -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#formations" class="nav-link">
+                            FORMATIONS 
+                            <svg class="nav-arrow" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#formations">Formations Initiales</a></li>
+                            <li><a href="#hero">Formation Continue (UFC)</a></li>
+                            <li><a href="#formations">Certificats de spécialité</a></li>
+                            <li><a href="#formations">Capacité en Droit</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ACTUALITÉS (Sans chevron) -->
+                    <li class="nav-item">
+                        <a href="#actualites" class="nav-link">ACTUALITÉS</a>
+                    </li>
+
+                    <!-- RECHERCHE -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#actualites" class="nav-link">
+                            RECHERCHE 
+                            <svg class="nav-arrow" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#actualites">Laboratoires et équipes</a></li>
+                            <li><a href="#actualites">Projets et publications</a></li>
+                            <li><a href="#actualites">École doctorale</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- VIE ÉTUDIANTE -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#vie-estudiantine" class="nav-link">
+                            VIE ÉTUDIANTE 
+                            <svg class="nav-arrow" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#vie-estudiantine">Espace Numérique Ouvert (ENO)</a></li>
+                            <li><a href="#vie-estudiantine">Vie de campus et clubs</a></li>
+                            <li><a href="#vie-estudiantine">Assistance et tutorat</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- SERVICE À LA COMMUNAUTÉ -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#services" class="nav-link">
+                            SERVICE À LA COMMUNAUTÉ 
+                            <svg class="nav-arrow" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#services">Insertion Professionnelle</a></li>
+                            <li><a href="#services">Incubateur d'entreprises</a></li>
+                            <li><a href="#services">Activités Citoyennes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Utilitaires à droite : Bouton MENU et Loupe -->
+            <div class="header-utilities">
+                <!-- Bouton MENU avec texte et cercle bleu hamburger -->
+                <button class="menu-action-group" id="headerMenuBtn" aria-label="Menu principal">
+                    <span class="menu-label-text">MENU</span>
+                    <span class="menu-blue-circle">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="7" x2="20" y2="7"></line>
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <line x1="8" y1="17" x2="20" y2="17"></line>
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Bouton Recherche (Cercle Jaune avec Loupe) -->
+                <button class="util-btn util-search-round" title="Rechercher sur le site" id="searchBtn" aria-label="Recherche">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Overlay de Barre de Recherche -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Rechercher une formation, un communiqué, un service..." id="searchInput">
+                <button class="search-close" id="searchClose" aria-label="Fermer la recherche">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==============================================
+         HERO SECTION (BANNER & SLIDER)
+    =============================================== -->
+    <section class="hero-section hero-fullwidth-section" id="hero">
+        <div class="hero-fullwidth-wrapper">
+            <!-- Piste du Carrousel pleine largeur -->
+            <div class="hero-slider-track" id="heroSliderTrack">
+                <!-- Diapositive 1 : Appel à candidatures (Formation continue) -->
+                <div class="hero-slide active-slide" data-slide-index="0" style="background-color: #ffffff;">
+                    <img src="assets/images/slide_appel_candidatures.png" alt="APPEL À CANDIDATURES - Recrutement d'auditeurs pour la formation continue - Année académique 2025/2026 - Prolongation jusqu'au samedi 03 octobre" class="full-slide-img">
+                </div>
+
+                <!-- Diapositive 2 : Vacances Citoyennes Numériques -->
+                <div class="hero-slide" data-slide-index="1" style="background-color: #07153d;">
+                    <img src="assets/images/slide_vacances_citoyennes.png" alt="2ème édition Vacances Citoyennes Numériques - Crunch Challenge 2026 - L'UN-CHK au service de la transformation numérique des entreprises sénégalaises" class="full-slide-img">
+                </div>
+
+                <!-- Diapositive 3 : Octobre Rose -->
+                <div class="hero-slide" data-slide-index="2" style="background-color: #fce4ec;">
+                    <img src="assets/images/slide_octobre_rose.png" alt="OCTOBRE ROSE - L'UN-CHK se mobilise pour la prévention du cancer du sein ! Parce que transmettre le savoir, c'est aussi transmettre les bons réflexes." class="full-slide-img">
+                </div>
+
+                <!-- Diapositive 4 : Master LEPRAD -->
+                <div class="hero-slide" data-slide-index="3" style="background-color: #f8fafc;">
+                    <img src="assets/images/slide_leprad.png" alt="Appel à candidatures pour le recrutement d'auditeurs - Master en Legaltech et Pratique du Droit (LEPRAD) - 100% en ligne" class="full-slide-img">
+                </div>
+
+                <!-- Diapositive 5 : Lancement du rapport IA ALIVE -->
+                <div class="hero-slide" data-slide-index="4" style="background-color: #f0f7fa;">
+                    <img src="assets/images/slide_ia.png" alt="Cérémonie de lancement officiel du rapport « Entre adoption et inquiétude : l'IA générative dans l'enseignement supérieur sénégalais »" class="full-slide-img">
+                </div>
+
+                <!-- Diapositive 6 : Master international MEDITS -->
+                <div class="hero-slide" data-slide-index="5" style="background-color: #f7f3ed;">
+                    <img src="assets/images/slide_medits.png" alt="APPEL À CANDIDATURES - Master international MEDITS - Développez une expertise dans les Métiers de l'Édition Scientifique" class="full-slide-img">
+                </div>
+            </div>
+
+            <!-- Flèche Précédente Flottante Gauche -->
+            <button class="carousel-nav-btn prev-btn" id="heroPrev" aria-label="Diapositive précédente">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <!-- Flèche Suivante Flottante Droite -->
+            <button class="carousel-nav-btn next-btn" id="heroNext" aria-label="Diapositive suivante">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+
+            <!-- Indicateurs / Points de pagination discrets -->
+            <div class="slider-dots-container" id="sliderDots">
+                <button class="slider-dot active-dot" data-slide-index="0" aria-label="Diapositive 1"></button>
+                <button class="slider-dot" data-slide-index="1" aria-label="Diapositive 2"></button>
+                <button class="slider-dot" data-slide-index="2" aria-label="Diapositive 3"></button>
+                <button class="slider-dot" data-slide-index="3" aria-label="Diapositive 4"></button>
+                <button class="slider-dot" data-slide-index="4" aria-label="Diapositive 5"></button>
+                <button class="slider-dot" data-slide-index="5" aria-label="Diapositive 6"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         CARTES D'ACCÈS RAPIDE : NOS FORMATIONS & ADMISSION
+    =============================================== -->
+    <section class="quick-actions-section" id="formations">
+        <div class="action-cards-grid">
+            <!-- Carte Orange : NOS FORMATIONS -->
+            <a href="#formations-detail" class="action-card card-orange" id="cardFormations">
+                <div class="card-left">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <span class="card-title">NOS FORMATIONS</span>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Carte Bleue : ADMISSION -->
+            <a href="#admission" class="action-card card-blue" id="cardAdmission">
+                <div class="card-left">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <span class="card-title">ADMISSION</span>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <!-- Liens Secondaires Centrés -->
+        <div class="sub-nav-links" id="vision">
+            <a href="#vision-anchor" class="sub-link">Vision</a>
+            <span class="sub-separator"></span>
+            <a href="#valeurs-anchor" class="sub-link">Valeurs</a>
+            <span class="sub-separator"></span>
+            <a href="#axes-anchor" class="sub-link">Axes Stratégiques</a>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION ACTUALITÉS & COMMUNIQUÉS
+    =============================================== -->
+    <section class="news-section" id="actualites">
+        <div class="section-container">
+            <h2 class="section-heading">ACTUALITÉS</h2>
+
+            <div class="news-grid">
+                <!-- Actualité 1 : Cheikh Hamidou Kane -->
+                <article class="news-card">
+                    <div class="news-thumb-wrapper">
+                        <img src="assets/images/cheikh_hamidou_kane.png" alt="Monsieur Cheikh Hamidou KANE" class="news-image grayscale-image">
+                    </div>
+                    <div class="news-body">
+                        <h3 class="news-card-title">
+                            Rappels biométriques, Cheikh Hamidou KANE, parrain d'UN-CHK
+                        </h3>
+                        <div class="news-meta">
+                            <span class="news-date">📅 18 octobre 2026</span>
+                        </div>
+                        <p class="news-excerpt">
+                            L'Université numérique Cheikh Hamidou Kane (UN-CHK) a organisé une visite de courtoisie et de mémoire au domicile de son illustre parrain, Monsieur Cheikh Hamidou Kane...
+                        </p>
+                        <a href="#news-cheikh-hamidou" class="news-read-more">
+                            Lire la suite 
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Actualité 2 : Pr Samad OUYA -->
+                <article class="news-card">
+                    <div class="news-thumb-wrapper">
+                        <img src="assets/images/pr_samad_ouya.jpg" alt="Professeur Samad OUYA" class="news-image">
+                    </div>
+                    <div class="news-body">
+                        <h3 class="news-card-title">
+                            Pr Samad OUYA, nommé président de la sous-commission pédagogique, Transition numérique et IA de la COR d'Afrique de l'Ouest
+                        </h3>
+                        <div class="news-meta">
+                            <span class="news-date">📅 12 octobre 2026</span>
+                        </div>
+                        <p class="news-excerpt">
+                            Le Professeur Samad OUYA, enseignant-chercheur à l'Université Cheikh Hamidou Kane (UN-CHK) a été nommé à la présidence de la Commission « Innovation pédagogique... »
+                        </p>
+                        <a href="#news-pr-ouya" class="news-read-more">
+                            Lire la suite 
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Colonne 3 : COMMUNIQUÉS -->
+                <aside class="communique-column">
+                    <div class="communique-header">
+                        <svg class="communique-header-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2m-4-3H9M7 16h6M7 8h6m-6 4h10"></path>
+                        </svg>
+                        <h3 class="communique-heading">COMMUNIQUÉS</h3>
+                    </div>
+
+                    <div class="communique-list">
+                        <!-- Communiqué 1 -->
+                        <div class="communique-item">
+                            <a href="#communique-1" class="communique-link">
+                                <p class="communique-text">
+                                    Lancement de la deuxième phase de sélection des candidats retenus pour le recrutement des tuteurs de l'UN-CHK...
+                                </p>
+                            </a>
+                            <span class="communique-date">18 octobre 2026</span>
+                        </div>
+
+                        <!-- Communiqué 2 -->
+                        <div class="communique-item">
+                            <a href="#communique-2" class="communique-link">
+                                <p class="communique-text">
+                                    Lancement officiel du premier appel à candidatures pour l'octroi d'allocations de perfectionnement linguistique d'anglais des bourses de recherche 2026
+                                </p>
+                            </a>
+                            <span class="communique-date">14 octobre 2026</span>
+                        </div>
+
+                        <!-- Communiqué 3 -->
+                        <div class="communique-item">
+                            <a href="#communique-3" class="communique-link">
+                                <p class="communique-text">
+                                    Prolongation - Appel à candidature pour recrutement d'un auditeur d'orientation et d'insertion (conseiller d'orientation professionnelle)
+                                </p>
+                            </a>
+                            <span class="communique-date">04 octobre 2026</span>
+                        </div>
+
+                        <!-- Communiqué 4 -->
+                        <div class="communique-item">
+                            <a href="#communique-4" class="communique-link">
+                                <p class="communique-text">
+                                    Prolongation exceptionnelle des inscriptions des auditeurs académiques pour le recrutement d'auditeurs en formation continue de l'UN-CHK (Rentrée académique 2025/2026)
+                                </p>
+                            </a>
+                            <span class="communique-date">28 septembre 2026</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Liens en bas de section -->
+            <div class="news-bottom-actions">
+                <div class="news-more-wrap">
+                    <a href="#toutes-les-actualites" class="more-link-gold">
+                        Plus d'actualités 
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="communique-more-wrap">
+                    <a href="#tous-les-communiques" class="more-link-gold">
+                        Tous les communiqués 
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION UN-CHK EN CHIFFRES
+    =============================================== -->
+    <section class="stats-section" id="en-chiffres">
+        <!-- Bandeau Gris du Titre -->
+        <div class="stats-ribbon">
+            <h2 class="stats-ribbon-title">UN-CHK EN CHIFFRES</h2>
+        </div>
+
+        <div class="stats-content-wrap">
+            <!-- 3 Grandes Cartes de Statistiques -->
+            <div class="stats-cards-grid">
+                <!-- Carte 1 : 1ère - Bleu Royal UN-CHK -->
+                <div class="stat-card stat-blue">
+                    <div class="stat-header">
+                        <span class="stat-big-number" data-target="1">1ère</span>
+                        <span class="stat-subheading">UNIVERSITÉ PUBLIQUE DU SÉNÉGAL</span>
+                    </div>
+                    <div class="stat-photo-wrap">
+                        <img src="assets/images/student_blue.png" alt="Étudiant UN-CHK souriant en t-shirt blanc sur fond bleu" class="stat-student-photo">
+                    </div>
+                </div>
+
+                <!-- Carte 2 : 19 - Jaune / Or -->
+                <div class="stat-card stat-yellow">
+                    <div class="stat-header">
+                        <span class="stat-big-number" data-target="19">19</span>
+                        <span class="stat-subheading">ESPACES NUMÉRIQUES OUVERTS (ENO)</span>
+                    </div>
+                    <div class="stat-photo-wrap">
+                        <img src="assets/images/student_yellow.png" alt="Étudiant UN-CHK avec lunettes en chemise en jean" class="stat-student-photo">
+                    </div>
+                </div>
+
+                <!-- Carte 3 : 26 - Violet / Lilas -->
+                <div class="stat-card stat-purple">
+                    <div class="stat-header">
+                        <span class="stat-big-number" data-target="26">26</span>
+                        <span class="stat-subheading">FILIÈRES</span>
+                    </div>
+                    <div class="stat-photo-wrap">
+                        <img src="assets/images/student_purple.png" alt="Étudiant UN-CHK en chemise à carreaux" class="stat-student-photo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jauges / Indicateurs clés -->
+            <div class="stats-indicators-row">
+                <div class="indicator-item">
+                    <div class="indicator-bar"><div class="indicator-fill" style="width: 85%;"></div></div>
+                    <span class="indicator-label">ÉTUDIANTS</span>
+                    <span class="indicator-count">65 000+</span>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-bar"><div class="indicator-fill" style="width: 95%;"></div></div>
+                    <span class="indicator-label">ENO</span>
+                    <span class="indicator-count">19 Centres</span>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-bar"><div class="indicator-fill" style="width: 78%;"></div></div>
+                    <span class="indicator-label">ENSEIGNANTS-CHERCHEURS</span>
+                    <span class="indicator-count">250+</span>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-bar"><div class="indicator-fill" style="width: 90%;"></div></div>
+                    <span class="indicator-label">TUTEURS</span>
+                    <span class="indicator-count">1 200+</span>
+                </div>
+            </div>
+
+            <!-- Bouton Plus de chiffres -->
+            <div class="stats-more-action">
+                <a href="#tous-les-chiffres" class="more-link-gold">
+                    Plus de chiffres 
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION VIE ESTUDIANTINE
+    =============================================== -->
+    <section class="campus-life-section" id="vie-estudiantine">
+        <div class="campus-life-grid">
+            <!-- Bloc Vert Gauche : Vie estudiantine -->
+            <div class="campus-block block-green">
+                <div class="block-green-content">
+                    <h2 class="campus-title">Vie<br>estudiantine</h2>
+                    <a href="#vie-campus" class="campus-cta-link">
+                        Découvrir plus 
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="block-green-photo">
+                    <img src="assets/images/student_suit.jpg" alt="Étudiant UN-CHK en costume étudiant" class="campus-student-img">
+                </div>
+            </div>
+
+            <!-- Bloc Central Scindé (Lilas en haut, Jaune en bas) -->
+            <div class="campus-block block-center-split">
+                <div class="center-top-accent"></div>
+                <div class="center-bottom-yellow">
+                    <p class="community-slogan">
+                        Nos étudiants créent une communauté dynamique et inclusive
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bloc Droite : Photo Équipe Sportive et Campus -->
+            <div class="campus-block block-right-photo">
+                <img src="assets/images/students_sports.jpg" alt="Équipe sportive et vie associative des étudiants UN-CHK" class="sports-team-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         PIED DE PAGE (FOOTER)
+    =============================================== -->
+    <footer class="main-footer" id="contact">
+        <!-- Liens en 4 Colonnes -->
+        <div class="footer-links-container">
+            <div class="footer-col">
+                <h4 class="footer-heading">À PROPOS DE L'UN-CHK</h4>
+                <ul class="footer-list">
+                    <li><a href="#presentation">Présentation</a></li>
+                    <li><a href="#gouvernance">Gouvernance</a></li>
+                    <li><a href="#organigramme">Organigramme</a></li>
+                    <li><a href="#textes">Textes et textes affiliés</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">NOS FORMATIONS</h4>
+                <ul class="footer-list">
+                    <li><a href="#formations-initiales">Formations initiales</a></li>
+                    <li><a href="#formations-continues">Formations continues</a></li>
+                    <li><a href="#certificats">Certificats de spécialité</a></li>
+                    <li><a href="#capacite">Capacité en Droit</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">LIENS UTILES</h4>
+                <ul class="footer-list">
+                    <li><a href="https://mesri.sec.gouv.sn" target="_blank" rel="noopener noreferrer">MESRI</a></li>
+                    <li><a href="https://anaqsup.sn" target="_blank" rel="noopener noreferrer">ANAQ-Sup</a></li>
+                    <li><a href="https://lecames.org" target="_blank" rel="noopener noreferrer">CAMES</a></li>
+                    <li><a href="https://campusen.sec.gouv.sn" target="_blank" rel="noopener noreferrer">CAMPUSEN</a></li>
+                    <li><a href="#crfp">CRFP</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">CONTACT</h4>
+                <div class="contact-block">
+                    <p class="contact-location">
+                        <svg class="contact-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Cité numérique - Diamniadio, Dakar, Sénégal<br>
+                        Avenue Bourguiba: +221 33 869 11 11
+                    </p>
+                    <p class="contact-details">
+                        <svg class="contact-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        +221 33 108 00 62<br>
+                        <svg class="contact-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:contact@unchk.edu.sn">contact@unchk.edu.sn</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barre Réseaux Sociaux & Accès ENO -->
+        <div class="footer-social-bar">
+            <div class="social-icons-group">
+                <a href="https://facebook.com" class="social-circle" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://twitter.com" class="social-circle" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                </a>
+                <a href="https://linkedin.com" class="social-circle" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="mailto:contact@unchk.edu.sn" class="social-circle" aria-label="Email">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://youtube.com" class="social-circle" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"/></svg>
+                </a>
+            </div>
+
+            <div class="footer-extra-links">
+                <a href="#eno" class="footer-eno-link">Nos Espaces Numériques Ouverts (ENO)</a>
+            </div>
+        </div>
+
+        <!-- Bande Inférieure de Copyright -->
+        <div class="footer-bottom-bar">
+            <div class="copyright-content">
+                <p class="copyright-text">
+                    Copyright © 2026 UN-CHK. Tous les droits sont réservés.
+                </p>
+                <!-- Bouton Retour en haut -->
+                <a href="#top" class="back-to-top" id="backToTop" aria-label="Retour en haut de page">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript Vanilla pur -->
+    <script src="script.js"></script>
+</body>
+</html>
